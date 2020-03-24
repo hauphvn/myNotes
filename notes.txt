@@ -1,0 +1,45 @@
+mysql
+	-start: sudo service mysql start
+	-stop: --------------------stop
+	-status:-------------------status
+mongodb:
+	-start: sudo service mongod start
+	-stop:-----------------------stop
+	-status:---------------------status
+	-shell: cai dat mongodb shell vao he thong de chay duoc 
+	terminal shell.
+	-go lenh: mongo - de chay vao man hinh console cua mongo
+	-Thao tac trong man hinh console:
+		- show dbs: show all database
+		- use tendabase: muon su dung
+		- db: hien thi db dang su dung
+		- Tao moi moi database:
+			- use shopping
+			- db.createCollection("books")
+		- show collections: de xem cac bang trong db hien tai
+		- db.dropDatabase(): xoa db dang su dung
+java:
+	- Change java version: sudo update-alternatives --config java
+Netbeans-11:
+	- Requirement: java 11.
+	- Get: 
+		sudo apt -y install wget unzip
+		wget https://www-us.apache.org/dist/incubator/netbeans/incubating-netbeans/incubating-11.0/incubating-netbeans-11.0-bin.zip
+	- unzip incubating-netbeans-11.0-bin.zip
+	- sudo mv netbeans/ /opt/
+	- nano ~/.bashrc
+		export PATH="$PATH:/opt/netbeans/bin/"
+	- source ~/.bashrc
+	- sudo nano /usr/share/applications/netbeans.desktop
+		[Desktop Entry]
+		Name=Netbeans IDE
+		Comment=Netbeans IDE
+		Type=Application
+		Encoding=UTF-8
+		Exec=/opt/netbeans/bin/netbeans
+		Icon=/opt/netbeans/nb/netbeans.png
+		Categories=GNOME;Application;Development;
+		Terminal=false
+		StartupNotify=true
+
+		
